@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambodian Food Menu</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo">Khmer Kitchen</a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <button class="icon-btn" onclick="showCartAlert()">Cart <span class="badge" id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+  
+
+  <section id="home" class="hero container scroll-animate">
+    <div class="hero-content">
+      <h1>Authentic Cambodian Cuisine</h1>
+      <p>Freshly prepared dishes inspired by Khmer tradition.</p>
+      <a href="#menu" class="btn btn-primary">Explore Menu</a>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <section id="menu" class="menu-section container scroll-animate">
+    <div class="menu-header">
+      <h2>Our Menu</h2>
+      <div class="controls">
+        <div class="filters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="mains">Mains</button>
+          <button class="chip" data-filter="salads">Salads</button>
+          <button class="chip" data-filter="drinks">Drinks</button>
+          <button class="chip" data-filter="desserts">Desserts</button>
+          <button class="chip" data-filter="vegan">Vegan</button>
+        </div>
+        <input type="text" id="searchInput" class="search" placeholder="Search dishes...">
+      </div>
+    </div>
+    <div class="grid" id="menuGrid"></div>
+  </section>
+
+    <!-- Image Overlay -->
+  <div class="modal" id="overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeAlert()">&times;</button>
+      <img id="alertImg" src="" alt="Dish">
+    </div>
+  </div>
+
+  <!-- Cart Modal -->
+  <div class="modal" id="alertModal">
+    <div class="modal-content">
+      <h3 id="alertTitle"></h3>
+      <div id="alertItems"></div>
+      <div class="cart-total" id="alertTotal"></div>
+      <div class="modal-actions" id="alertActions"></div>
+    </div>
+  </div>
+
+
+ <section id="about" class="about-section container scroll-animate">
+  <h2>About Our Restaurant</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p>
+        Khmer Kitchen is a family-owned restaurant bringing the authentic
+        flavors of Cambodia to your table. Our chefs prepare each dish with
+        fresh ingredients, traditional recipes, and a touch of modern creativity.
+      </p>
+      <p>
+        We believe in warm hospitality and creating a cozy space where guests
+        can enjoy delicious meals and feel at home.
+        We believe in warm hospitality and creating a cozy space where guests
+        can enjoy delicious meals and feel at home.We believe in warm hospitality and creating a cozy space where guests
+        can enjoy delicious meals and feel at home.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT53mFaRleBHNlVrAUJawnbcRJcYxR25or0og&s"
+           alt="Khmer Kitchen Restaurant">
+    </div>
+  </div>
+  
+    <div class="about-content">
+    <div class="about-image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBfgOX5kgl7P37tHyLFcKOjkiuXyjFZA7hSA&s"
+           alt="Khmer Kitchen Restaurant">
+    </div>
+    <div class="about-text">
+      <p>
+        Khmer Kitchen is a family-owned restaurant bringing the authentic
+        flavors of Cambodia to your table. Our chefs prepare each dish with
+        fresh ingredients, traditional recipes, and a touch of modern creativity.
+      </p>
+      <p>
+        We believe in warm hospitality and creating a cozy space where guests
+        can enjoy delicious meals and feel at home.
+      </p>
+    </div>
+    </div>
+</section>
+
+  <section id="contact" class="contact-section container scroll-animate" class="contact">
+    <div class="heroi">
+    <h1>Contact Us</h1>
+  </div>
+  
+    
+    <p>We bring the flavors of Cambodia to your table with love and care.
+      We bring the flavors of Cambodia to your table with love and care.
+      We bring the flavors of Cambodia to your table with love and care.
+      We bring the flavors of Cambodia to your table with love and care.
+      We bring the flavors of Cambodia to your table with love and care.
+    </p>
+  </section>
+
+  <section class="map about-section container scroll-animate">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3908.!2d105.6570435!3d11.5724263!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b86ece26c69dd%3A0x1d6d525716c4ba97!2z...!5e0!3m2!1skm!2skh!4v1736206853453!5m2!1skm!2skh"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer class="site-footer container">
+    <div class="subscribe-bar">
+        <h3>Subscribe to our newsletter</h3>
+        <input type="email" id="email" placeholder="Enter your email">
+        <button onclick="subscribe()">Subscribe</button>
+    </div>
+
+    <!-- Custom Alert -->
+    <div class="alert-box" id="alertBox">
+      <div class="alert-content">
+        <h2>Subscription Successful</h2>
+        <p id="alertMessage"></p>
+        <button onclick="closeAlert()">OK</button>
+      </div>
+    </div>
+    
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>About</h3>
+        <p>Lorem ipsum dolor sit amet consectetur diam ultricies leo etiam nibh tristique. Odio feugiat vitae libero vestibulum viverra elementum luctus.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Case</a></li>
+          <li><a href="#">Request Pickup</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Working Hours</h3>
+        <p>Mon – Fri: 9:00AM – 6:00PM<br>
+           Sat – Sun: 8:00AM – 4:00PM</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Get In Touch</h3>
+        <p>Add: New Hyde Park, NY 11040<br>
+           Email: example@info.com<br>
+           Phone: 333 666 0000</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">
+        </span> Khmer Kitchen. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js.js"></script>
+</body>
+</html>
