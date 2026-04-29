@@ -7,7 +7,7 @@ const MENU_ITEMS = [
     price: 5.00,
     category: "mains",
     desc: "Traditional Cambodian steamed fish curry with coconut milk.",
-    image: "https://silkroadrecipes.com/wp-content/uploads/2024/08/Cambodian-Khmer-Fish-Amok-Recipe-square.jpg",
+    image: "https://silkroadrecipes.com/wp-content/uploads/2024/08/Cambodian-Khmer-Fish-Amok-Recipe-square.jpghttps://www.google.com/imgres?q=berger&imgurl=https%3A%2F%2Fpng.pngtree.com%2Fpng-clipart%2F20250419%2Foriginal%2Fpngtree-fresh-berger-food-png-image_20736277.png&imgrefurl=https%3A%2F%2Fpngtree.com%2Ffreepng%2Ffresh-berger-food_20736277.html&docid=UzyOQ2DCIhWeqM&tbnid=Um3rHRndFne32M&vet=12ahUKEwjAxK_O25KUAxVX-DgGHdD-HysQnPAOegQIKRAB..i&w=2500&h=2500&hcb=2&ved=2ahUKEwjAxK_O25KUAxVX-DgGHdD-HysQnPAOegQIKRAB",
   },
   {
     id: "green-salad",
